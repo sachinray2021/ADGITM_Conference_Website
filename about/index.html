@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100&family=Cormorant+Garamond:ital@1&family=Dancing+Script&family=Edu+SA+Beginner&family=Lumanosimo&family=Tinos&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar {
+        background-color: white;
+        height: 65px;
+      }
+
+      .navbar li {
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+      }
+
+      .navbar ul {
+        overflow: auto;
+      }
+
+      .navbar li a {
+        padding: 3px 3px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+      }
+
+      .navbar input {
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+      }
+
+      .nv {
+        float: right;
+        margin-left: 5px;
+      }
+
+      .word {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        color: blue;
+
+        font-size: xx-large;
+      }
+
+      /* Increase the margin-right for the .right class to add more space */
+      .right {
+        float: right;
+        margin-left: 125px;
+        margin-right: 30px; /* Adjust the margin to increase the space */
+      }
+
+      .left {
+        margin-left: 30px;
+        margin-right: 50px; /* Adjust the margin to your liking */
+        font-size: 17px;
+      }
+
+      /* Add a new class for the container */
+      .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .color {
+        background-color: rgb(228, 230, 236);
+      }
+      .ml11 {
+
+        text-align: center;
+      }
+      
+      .ml11 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+        text-align: center;
+      }
+      
+      .ml11 .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #030901;
+        transform-origin: 0 50%;
+      }
+      
+      .ml11 .line1 { 
+        top: 0; 
+        left: 0;
+      }
+      
+      .ml11 .letter {
+        display: inline-block;
+        line-height: 1em;
+        color: blue;
+        font-size: xx-large;
+        text-align: center;
+      }
+      .ml3 {
+        text-align: center;
+        color: blue;
+        font: 600 normal 2.5em "tahoma";
+      }
+      .ml10 {
+        text-align: center;
+        position: relative;
+        color: blue;
+        
+      }
+      
+      .ml10 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.2em;
+        padding-right: 0.05em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+      }
+      
+      .ml10 .letter {
+        display: inline-block;
+        line-height: 1em;
+        transform-origin: 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="/conference_track/index.html">Conference Track</a></li>
+        <li><a href="">Conference Committee</a></li>
+        <li><a href="/important_dates/index.html">Important Dates</a></li>
+        <li><a href="/registration/index.html">Registration</a></li>
+        <li><a href="/submission/index.html">Submission</a></li>
+      </ul>
+    </nav>
+    <div class="color">
+      <br>
+      <h1 class="word">
+        Dr. Akhilesh Das Gupta Institute of Technology & Management
+      </h1>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var words = ["Dr. Akhilesh Das Gupta Institute of Technology & Management"],
+        part,
+        i = 0,
+        offset = 0,
+        len = words.length,
+        forwards = true,
+        skip_count = 0,
+        skip_delay = 15,
+        speed = 70;
+
+      var wordflick = function () {
+        setInterval(function () {
+          if (forwards) {
+            if (offset >= words[i].length) {
+              ++skip_count;
+              if (skip_count == skip_delay) {
+                forwards = false;
+                skip_count = 0;
+              }
+            }
+          } else {
+            if (offset == 0) {
+              forwards = true;
+              i++;
+              offset = 0;
+              if (i >= len) {
+                i = 0;
+              }
+            }
+          }
+          part = words[i].substr(0, offset);
+          if (skip_count == 0) {
+            if (forwards) {
+              offset++;
+            } else {
+              offset--;
+            }
+          }
+          $(".word").text(part);
+        }, speed);
+      };
+
+      $(document).ready(function () {
+        wordflick();
+      });
+    </script>
+
+      <br>
+      <!-- Wrap the text and image inside a container div -->
+      <div class="content-container">
+        <p class="left">
+          <b
+            >Dr. Akhilesh Das Gupta Institute of Technology & Management,
+            formerly known as Northern India Engineering College (NIEC), New
+            Delhi was established by BBDES, LUCKNOW in the year 2003. ADGITM has
+            an aesthetically designed campus spread over approximately 8.08
+            acres of lush green environment at Shastri Park. The Campus
+            comprises of five interconnected blocks covering a built up area of
+            approx. 23,636.67 square meters. ADGITM offers following Under
+            Graduate and Post Graduate level full time Professional programs
+            approved by AICTE and BCI in affiliation with Guru Gobind Singh
+            Indraprastha University (GGSIPU), Delhi. The college is providing
+            Quality Teaching with the help of Virtual Lab, EduSAT, NPTEL and
+            audio-visual aids, such as LCD/LED Projectors and OHPs. One day
+            seminar by different departments is a regular feature. The faculty
+            is taking regular class test for checking the knowledge of the
+            students. A 360 degree appraisal is undertaken by the management by
+            taking student feedback regarding faculty teaching methods, and
+            corrective actions are taken based on such feedbacks.</b
+          >
+        </p>
+        <img
+          class="right"
+          src="akhilesh.jpg"
+          alt="Image Description"
+          width="500"
+          height="300"
+        />
+      </div>
+      <br>
+      <br>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h1 class="ml10">
+        <span class="text-wrapper">
+          <span class="letters">The Department of Artificial Intelligence and Machine Learning (AI & ML)</span>
+        </span>
+    </h1>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script>
+        var textWrapper = document.querySelector('.ml10 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml10 .letter',
+    rotateY: [-90, 0],
+    duration: 1300,
+    delay: (el, i) => 45 * i
+  }).add({
+    targets: '.ml10',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+      </script>
+
+      <br>
+      <div class="content-container">
+        <p class="left">
+          <b
+            >The Department of Artificial Intelligence and Machine Learning is established in the year 2021, offers an undergraduate programme B. Tech. under the affiliation of GGSIPU, New Delhi.
+
+            ADGITM, thrives to impart an effective technical education by means of experiential learning and develop concrete infrastructure with efficient faculty and dynamic student community. AI & ML insists on implementing Outcome Based Education (OBE) throughout the tenure of under graduation by means of getting university ranks, higher placement records. To emphasize on lifelong learning and applying knowledge on solving real work problems, department conduct various technical events like hackathons, coding competitions, training programs, workshops and seminars.</b
+          >
+        </p>
+        <img
+          class="right"
+          src="ai.png"
+          alt="Image Description"
+          width="400"
+          height="250"
+        />
+      </div>
+      <br>
+      <br>
+    </div>
+    <br>
+    <br>
+    <div class="color">
+      <br />
+      <br />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <h1 class="ml11">
+        <span class="text-wrapper">
+          <span class="line line1"></span>
+          <span class="letters">International Conference On AI Solutions</span>
+        </span>
+      </h1>
+      <script>
+        var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+      </script>
+      <br>
+      <!-- Wrap the text and image inside a container div -->
+      <div class="content-container">
+        <p class="left">
+          <b
+            >The overarching objective of this conference is to facilitate cross-disciplinary dialogue and knowledge exchange, fostering innovation and progress in their respective domains. The Robotics Conference aims to explore the latest advancements in automation and human-robot interaction, while the Healthcare Conference focuses on integrating technology to enhance patient care. The Forensics Conference seeks to advance forensic science and investigative techniques. The AI Multidisciplinary Conference delves into the diverse applications of artificial intelligence across various industries, and the Cognitive Conference aims to understand and replicate human thought processes. Lastly, the Sustainable Development Conference strives to promote eco-conscious practices and policies, driving a greener and more sustainable future. Together, this forms a dynamic platform for experts to collaborate and push the boundaries of knowledge in their respective fields.</b
+          >
+        </p>
+        <img
+          class="right"
+          src="conf.jpg"
+          alt="Image Description"
+          width="400"
+          height="250"
+        />
+      </div>
+      <br>
+      <br>
+    </div>
+
+    </div>
+  </body>
+</html>
