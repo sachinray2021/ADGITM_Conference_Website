@@ -8,6 +8,9 @@
       href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100&family=Cormorant+Garamond:ital@1&family=Dancing+Script&family=Edu+SA+Beginner&family=Lumanosimo&family=Tinos&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="style.css">
     <style>
       .navbar {
         background-color: white;
@@ -138,6 +141,107 @@
         line-height: 1em;
         transform-origin: 0 0;
       }
+      .footer-16371 {
+        background-color: #b5d2df;
+        padding: 1rem 0;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    .footer-16371 .footer-site-logo {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    
+    .footer-16371 .footer-site-logo a {
+        color: #cbc5dd;
+    }
+    
+    .footer-16371 .nav-links {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-16371 .nav-links li {
+        display: inline-block;
+    }
+    
+    .footer-16371 .nav-links li a {
+        padding: 10px;
+        color: #000;
+    }
+    
+    .footer-16371 .nav-links li a:hover {
+        color: #4200ff;
+    }
+    
+    .copyright{
+        color: #050404; 
+    }
+    @-webkit-keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+    
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+    .slider {
+      background: white;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+      height: 100px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 960px;
+    }
+    .slider::before,
+    .slider::after {
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+    }
+    .slider::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+    .slider::before {
+      left: 0;
+      top: 0;
+    }
+    .slider .slide-track {
+      -webkit-animation: scroll 40s linear infinite;
+      animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+    .slider .slide {
+      height: 100px;
+      width: 250px;
+    }
+    .partnerheading{
+        /* margin: 40px 40px; */
+        padding-bottom: 40px;
+        padding-left: 400px ;
+        align-items: center;
+    }
+    #partners{
+        margin: 100px;
+    }
+    
     </style>
   </head>
   <body>
@@ -356,5 +460,87 @@ anime.timeline({loop: true})
     </div>
 
     </div>
+    <section id="partners">
+      <h2 class="partnerheading">Academic Partners</h2>
+      <div class="slider">
+  
+        <div class="slide-track">
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-16371">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <a class="navbar-brand" href="index.html">
+              <img class="logoimg" src="img/logo.png" alt=""></a>
+            <br>
+            <div class="footer-site-logo mb-4">
+              <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
+            </div>
+            <ul class="list-unstyled nav-links mb-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="conference_committe.html">conference Committee</a></li>
+              <li><a href="conference_track.html">Conference Track</a></li>
+              <li><a href="submission.html">Submission</a></li>
+              <li><a href="importantdates.html">Important Dates</a></li>
+              <li><a href="resgistration.html">Resgistration</a></li>
+              <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
+  
+            </ul>
+  
+            <div class="copyright">
+              <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
+            </div>
+  
+  
+          </div>
+        </div>
+      </div>
+    </footer>
+  
   </body>
 </html>

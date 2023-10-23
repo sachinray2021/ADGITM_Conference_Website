@@ -2,12 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>ICAICCIT - 2023</title>
-    <meta name="description" content="Conference Website - ICAICCIT - 2023">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/aiccit_logo.png">
-    <meta name="next-head-count" content="5">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONFERENCE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .navbar {
+            background-color: white;
+            height: 65px;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            /* Increase the font size */
+        }
+
+        .navbar input {
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+        .nv {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .footer-16371 {
+            background-color: #b5d2df;
+            padding: 1rem 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .footer-16371 .footer-site-logo {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .footer-16371 .footer-site-logo a {
+            color: #cbc5dd;
+        }
+
+        .footer-16371 .nav-links {
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-16371 .nav-links li {
+            display: inline-block;
+        }
+
+        .footer-16371 .nav-links li a {
+            padding: 10px;
+            color: #000;
+        }
+
+        .footer-16371 .nav-links li a:hover {
+            color: #4200ff;
+        }
+
+        .copyright {
+            color: #050404;
+        }
+        @-webkit-keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-250px * 7));
+            }
+          }
+          
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-250px * 7));
+            }
+          }
+          .slider {
+            background: white;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+            height: 100px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 960px;
+          }
+          .slider::before,
+          .slider::after {
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+          }
+          .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+          }
+          .slider::before {
+            left: 0;
+            top: 0;
+          }
+          .slider .slide-track {
+            -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+          }
+          .slider .slide {
+            height: 100px;
+            width: 250px;
+          }
+          .partnerheading{
+              /* margin: 40px 40px; */
+              padding-bottom: 40px;
+              padding-left: 400px ;
+              align-items: center;
+          }
+          #partners{
+              margin: 100px;
+          }
+          
+    </style>
+    <!-- <link rel="icon" href="images/aiccit_logo.png">
+    <meta name="next-head-count" content="5"> 
     <link rel="preload" href="/_next/static/css/ac901b60827c2a59.css" as="style">
     <link rel="stylesheet" href="css/ac901b60827c2a59.css" data-n-g=""><noscript data-n-css=""></noscript>
     <script defer="" nomodule="" src="js/polyfills-c67a75d1b6f99dc8.js"></script>
@@ -17,11 +157,23 @@
     <script src="js/_app-981897abb835b3ff.js" defer=""></script>
     <script src="js/conference_track-ccf6fdf7c0537d90.js" defer=""></script>
     <script src="js/_buildManifest.js" defer=""></script>
-    <script src="js/_ssgManifest.js" defer=""></script>
+    <script src="js/_ssgManifest.js" defer=""></script> -->
 </head>
 
 <body>
-    <div id="__next">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about/index.html">About</a></li>
+            <li><a href="/conference_track/index.html">Conference Track</a></li>
+            <li><a href="ortho.html">Conference Committee</a></li>
+            <li><a href="/important_dates/index.html">Important Dates</a></li>
+            <li><a href="/registration/index.html">Registration</a></li>
+            <li><a href="/submission/index.html">Submission</a></li>
+
+        </ul>
+    </nav>
+    <!-- <div id="__next">
             <main class="flex-grow">
                 <section class="py-10 text-gray" data-aos="fade-right">
                     <div class="text-center mt-14">
@@ -238,43 +390,90 @@
                         </div>
                     </div>
                 </section>
-            </main>
-            <div class="w-full bg-[#10182F]">
-                <div class="flex flex-col items-center justify-center p-4 gap-4"><img loading="lazy" width="100"
-                        height="100" decoding="async" data-nimg="1" style="color:transparent"
-                        srcset="image_9 1x, image_5 2x" src="image_5">
-                    <div class="flex flex-row items-center justify-between">
-                        <ul class="hidden md:flex"><a href="/">
-                                <li class="ml-10 text-sm hover:text-cyan-600 text-white">Home</li>
-                            </a><a href="/about">
-                                <li class="ml-10 text-sm hover:text-cyan-600 text-white">About Us</li>
-                            </a><a href="/conference_track">
-                                <li class="ml-10 text-sm hover:text-cyan-600 text-white">Conference Track</li>
-                            </a><a href="/important_dates">
-                                <li class="ml-10 text-sm hover:text-cyan-600 text-white">Important Dates</li>
-                            </a><a href="/submission">
-                                <li class="ml-10 text-sm hover:text-cyan-600 text-white">Submission</li>
-                            </a><a href="/registration">
-                                <li class="ml-10 text-sm hover:text-cyan-600 text-white">Registration</li>
-                            </a>
+            </main> -->
+            <section id="partners">
+                <h2 class="partnerheading">Academic Partners</h2>
+                <div class="slider">
+            
+                  <div class="slide-track">
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
                     </div>
-                    <div class="flex flex-row items-center justify-center gap-8">
-                        <div class="flex flex-row gap-2 items-center text-sm text-white"><svg stroke="currentColor"
-                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.57 22a2 2 0 0 0 1.43-.59l2.71-2.71a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0l-1.6 1.59a7.55 7.55 0 0 1-3-1.59 7.62 7.62 0 0 1-1.59-3l1.59-1.6a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0L2.59 6A2 2 0 0 0 2 7.43 15.28 15.28 0 0 0 6.3 17.7 15.28 15.28 0 0 0 16.57 22zM6 5.41 8.59 8 7.3 9.29a1 1 0 0 0-.3.91 10.12 10.12 0 0 0 2.3 4.5 10.08 10.08 0 0 0 4.5 2.3 1 1 0 0 0 .91-.27L16 15.41 18.59 18l-2 2a13.28 13.28 0 0 1-8.87-3.71A13.28 13.28 0 0 1 4 7.41zM20 11h2a8.81 8.81 0 0 0-9-9v2a6.77 6.77 0 0 1 7 7z">
-                                </path>
-                                <path d="M13 8c2.1 0 3 .9 3 3h2c0-3.22-1.78-5-5-5z"></path>
-                            </svg>
-                            <p>+91 9910891864 (Dr. Poonam Tanwar)</p>
-                        </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                    </div>
+                    <div class="slide">
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+    <footer class="footer-16371">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logoimg" src="img/logo.png" alt=""></a>
+                    <br>
+                    <div class="footer-site-logo mb-4">
+                        <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
+                    </div>
+                    <ul class="list-unstyled nav-links mb-5">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="conference_committe.html">conference Committee</a></li>
+                        <li><a href="conference_track.html">Conference Track</a></li>
+                        <li><a href="submission.html">Submission</a></li>
+                        <li><a href="importantdates.html">Important Dates</a></li>
+                        <li><a href="resgistration.html">Resgistration</a></li>
+                        <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
 
+                    </ul>
+
+                    <div class="copyright">
+                        <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
+                    </div>
+
+
+                </div>
             </div>
         </div>
-    </div>
-    <script id="__NEXT_DATA__"
-        type="application/json">{"props":{"pageProps":{}},"page":"/conference_track","query":{},"buildId":"11_pTcomAhGd3Ztu0e3YA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+    </footer>
+    <!-- <script id="__NEXT_DATA__"
+        type="application/json">{"props":{"pageProps":{}},"page":"/conference_track","query":{},"buildId":"11_pTcomAhGd3Ztu0e3YA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script> -->
 </body>
 
 </html>

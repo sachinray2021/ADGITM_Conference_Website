@@ -1,206 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CONFERENCE</title>
-    <style>
-      .navbar {
-        background-color: white;
-        height: 65px;
-      }
-      .navbar li {
-        float: left;
-        list-style: none;
-        margin: 13px 20px;
-      }
-      .navbar ul {
-        overflow: auto;
-      }
-      .navbar li a {
-        padding: 3px 3px;
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 20px; /* Increase the font size */
-      }
-      .navbar input {
-        border: 2px solid rgb(0, 0, 0);
-        border-radius: 14px;
-        padding: 3px 17px;
-        width: 129px;
-      }
-      .nv {
-        float: right;
-        margin-left: 5px;
-      }
 
-      /* Modified styles for the video container and video */
-      .video-container {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        background-color: rgb(240, 240, 240);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONFERENCE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+  <style>
+    /* Modified styles for the video container and video */
+    .video-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgb(240, 240, 240);
+    }
 
-      .video {
-        width: 100%;
-        max-height: 100%; /* Adjust the height as needed */
-        z-index: 1;
-      }
-      word {
-        margin: auto;
-        color: blue;
-        font: 600 normal 2.5em "tahoma";
-      }
-      .card1 {
-        margin-top: 100px;
-      }
+    .video {
+      width: 100%;
+      max-height: 100%;
+      /* Adjust the height as needed */
+      z-index: 1;
+    }
 
-      a .icon {
-        min-width: 24px;
-        width: 24px;
-        height: 24px;
-        margin-left: 5px;
-        transform: translateX(var(--link-icon-translate));
-        opacity: var(--link-icon-opacity);
-        transition: all 0.3s;
-      }
+    word {
+      margin: auto;
+      color: blue;
+      font: 600 normal 2.5em "tahoma";
+    }
 
-      .section-2 {
-        margin-top: 43px;
-        margin-bottom: 50px;
-      }
-      
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/about/index.html">About</a></li>
-        <li><a href="/conference_track/index.html">Conference Track</a></li>
-        <li><a href="ortho.html">Conference Committee</a></li>
-        <li><a href="/important_dates/index.html">Important Dates</a></li>
-        <li><a href="/registration/index.html">Registration</a></li>
-        <li><a href="/submission/index.html">Submission</a></li>
+    .card1 {
+      margin-top: 100px;
+    }
 
-      </ul>
-    </nav>
+    a .icon {
+      min-width: 24px;
+      width: 24px;
+      height: 24px;
+      margin-left: 5px;
+      transform: translateX(var(--link-icon-translate));
+      opacity: var(--link-icon-opacity);
+      transition: all 0.3s;
+    }
 
-    <!-- Move the video container below the navbar -->
-    <div class="video-container">
-      <video class="video" autoplay loop muted>
-        <source src="in.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <br>
-    <br>
-    
-    <section class="cardall">
-        <div class="card-columns p-3">
-          <div class="card text-center card1">
-            <div class="card-body">
-              <img
-                class="card-img-top"
-                src="mull.jpg"
-                width="200px"
-                height="200px"
-                alt="Card image cap"
-              />
-              <h4 class="card-title p-3">AI MULTIDISCIPLINARY</h4>
-              <p class="card-text">
-                "Embark on a journey across various disciplines with our multidisciplinary AI conference."
-              </p>
-            </div>
-          </div>
-  
-          <div class="card text-center">
-            <div class="card-body">
-              <img
-                class="card-img-top"
-                src="ROBOTICS.png"
-                width="250px"
-                height="250px"
-                alt="Card image cap"
-              />
-              <h4 class="card-title p-3">AI ROBOTICS</h4>
-              <p class="card-text">
-                "Delve into the future of artificial intelligence and robotics at our conference dedicated to these cutting-edge technologies."
-              </p>
+    .section-2 {
+      margin-top: 43px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
 
-            </div>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <img
-                class="card-img-top"
-                src="ff.jpg"
-                alt="Card image cap"
-              />
-              <h4 class="card-title p-3">AI FORENSIC</h4>
-              <p class="card-text">
-                "Uncover the role of artificial intelligence in forensic science at our specialized conference."
-              </p>
-            </div>
-          </div>
-          <div class="card bg-primary text-white text-center p-3">
-            <h4 class="card-title p-2">CONFERENCE FOCUS AREAS</h4>
-            <blockquote class="blockquote mb-0">
-              <p>
-                "Celebrate a diverse array of ideas and expertise with our conference focus areas. Explore the following themes that will guide our event and inspire engaging discussions."
-              </p>
-            </blockquote>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <img
-                class="card-img-top"
-                src="cogg.jpg"
-                alt="Card image cap"
-              />
-              <h4 class="card-title p-3">AI COGNITIVE</h4>
-              <p class="card-text">
-                "Unlock the potential of artificial intelligence in the realm of cognitive sciences at our dedicated conference. "
-              </p>
-            </div>
-          </div>
-          <div class="card text-center card1">
-            <div class="card-body">
-              <img
-                class="card-img-top"
-                src="sus.jpg"
-                width="200px"
-                height="200px"
-                alt="Card image cap"
-              />
-              <h4 class="card-title p-3">AI SUSTAINLABLE DEVELOPMENT</h4>
-              <p class="card-text">
-                "Navigate the critical intersection of artificial intelligence and sustainable development at our forward-thinking conference."
-              </p>
-            </div>
-          </div>
-          <div class="card text-center">
-            <div class="card-body">
-              <img
-                class="card-img-top"
-                src="hea.png"
-                alt="Card image cap"
-              />
-              <h4 class="card-title p-3">AI HEALTHCARE</h4>
-              <p class="card-text">
-                "Embark on a transformative journey through the healthcare landscape with our AI in Healthcare conference."
-              </p>
-            </div>
-          </div>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/about/index.html">About</a></li>
+      <li><a href="conference_track/index.html">Conference Track</a></li>
+      <li><a href="ortho.html">Conference Committee</a></li>
+      <li><a href="/important_dates/index.html">Important Dates</a></li>
+      <li><a href="/registration/index.html">Registration</a></li>
+      <li><a href="/submission/index.html">Submission</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- Move the video container below the navbar -->
+  <div class="video-container">
+    <video class="video" autoplay loop muted>
+      <source src="in.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <br>
+  <br>
+
+  <section class="cardall">
+    <div class="card-columns p-3">
+      <div class="card text-center card1">
+        <div class="card-body">
+          <img class="card-img-top" src="mull.jpg" width="200px" height="200px" alt="Card image cap" />
+          <h4 class="card-title p-3">AI MULTIDISCIPLINARY</h4>
+          <p class="card-text">
+            "Embark on a journey across various disciplines with our multidisciplinary AI conference."
+          </p>
         </div>
-      </section>
-      
+      </div>
 
+      <div class="card text-center">
+        <div class="card-body">
+          <img class="card-img-top" src="ROBOTICS.png" width="250px" height="250px" alt="Card image cap" />
+          <h4 class="card-title p-3">AI ROBOTICS</h4>
+          <p class="card-text">
+            "Delve into the future of artificial intelligence and robotics at our conference dedicated to these
+            cutting-edge technologies."
+          </p>
+
+        </div>
+      </div>
+      <div class="card text-center">
+        <div class="card-body">
+          <img class="card-img-top" src="ff.jpg" alt="Card image cap" />
+          <h4 class="card-title p-3">AI FORENSIC</h4>
+          <p class="card-text">
+            "Uncover the role of artificial intelligence in forensic science at our specialized conference."
+          </p>
+        </div>
+      </div>
+      <div class="card bg-primary text-white text-center p-3">
+        <h4 class="card-title p-2">CONFERENCE FOCUS AREAS</h4>
+        <blockquote class="blockquote mb-0">
+          <p>
+            "Celebrate a diverse array of ideas and expertise with our conference focus areas. Explore the following
+            themes that will guide our event and inspire engaging discussions."
+          </p>
+        </blockquote>
+      </div>
+      <div class="card text-center">
+        <div class="card-body">
+          <img class="card-img-top" src="cogg.jpg" alt="Card image cap" />
+          <h4 class="card-title p-3">AI COGNITIVE</h4>
+          <p class="card-text">
+            "Unlock the potential of artificial intelligence in the realm of cognitive sciences at our dedicated
+            conference. "
+          </p>
+        </div>
+      </div>
+      <div class="card text-center card1">
+        <div class="card-body">
+          <img class="card-img-top" src="sus.jpg" width="200px" height="200px" alt="Card image cap" />
+          <h4 class="card-title p-3">AI SUSTAINLABLE DEVELOPMENT</h4>
+          <p class="card-text">
+            "Navigate the critical intersection of artificial intelligence and sustainable development at our
+            forward-thinking conference."
+          </p>
+        </div>
+      </div>
+      <div class="card text-center">
+        <div class="card-body">
+          <img class="card-img-top" src="hea.png" alt="Card image cap" />
+          <h4 class="card-title p-3">AI HEALTHCARE</h4>
+          <p class="card-text">
+            "Embark on a transformative journey through the healthcare landscape with our AI in Healthcare conference."
+          </p>
+        </div>
+      </div>
+    </div>
     
-  </body>
+  </section>
+  <section id="partners">
+    <h2 class="partnerheading">Academic Partners</h2>
+    <div class="slider">
+
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-16371">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <a class="navbar-brand" href="index.html">
+            <img class="logoimg" src="img/logo.png" alt=""></a>
+          <br>
+          <div class="footer-site-logo mb-4">
+            <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
+          </div>
+          <ul class="list-unstyled nav-links mb-5">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="conference_committe.html">conference Committee</a></li>
+            <li><a href="conference_track.html">Conference Track</a></li>
+            <li><a href="submission.html">Submission</a></li>
+            <li><a href="importantdates.html">Important Dates</a></li>
+            <li><a href="resgistration.html">Resgistration</a></li>
+            <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
+
+          </ul>
+
+          <div class="copyright">
+            <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      });
+    });
+  </script>
+
+
+
+
+</body>
+
 </html>

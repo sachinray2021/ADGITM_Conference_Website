@@ -1,0 +1,130 @@
+.navbar {
+  background-color: white;
+  height: 65px;
+}
+.navbar li {
+  float: left;
+  list-style: none;
+  margin: 13px 20px;
+}
+.navbar ul {
+  overflow: auto;
+}
+.navbar li a {
+  padding: 3px 3px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px; /* Increase the font size */
+}
+.navbar input {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 14px;
+  padding: 3px 17px;
+  width: 129px;
+}
+.nv {
+  float: right;
+  margin-left: 5px;
+}
+.footer-16371 {
+  background-color: #b5d2df;
+  padding: 1rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-16371 .footer-site-logo {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.footer-16371 .footer-site-logo a {
+  color: #cbc5dd;
+}
+
+.footer-16371 .nav-links {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-16371 .nav-links li {
+  display: inline-block;
+}
+
+.footer-16371 .nav-links li a {
+  padding: 10px;
+  color: #000;
+}
+
+.footer-16371 .nav-links li a:hover {
+  color: #4200ff;
+}
+
+.copyright {
+  color: #050404;
+}
+
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+.partnerheading{
+    /* margin: 40px 40px; */
+    padding-bottom: 40px;
+    padding-left: 400px ;
+    align-items: center;
+}
+#partners{
+    margin: 100px;
+}
