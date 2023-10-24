@@ -3,153 +3,155 @@
 
 <head>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CONFERENCE</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONFERENCE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-        <!-- <link rel="stylesheet" href="style.css"> -->
-        <style>
-            .navbar {
-                background-color: white;
-                height: 65px;
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .navbar {
+            background-color: white;
+            height: 65px;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            /* Increase the font size */
+        }
+
+        .navbar input {
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+        .nv {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .footer-16371 {
+            background-color: #b5d2df;
+            padding: 1rem 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .footer-16371 .footer-site-logo {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .footer-16371 .footer-site-logo a {
+            color: #cbc5dd;
+        }
+
+        .footer-16371 .nav-links {
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-16371 .nav-links li {
+            display: inline-block;
+        }
+
+        .footer-16371 .nav-links li a {
+            padding: 10px;
+            color: #000;
+        }
+
+        .footer-16371 .nav-links li a:hover {
+            color: #4200ff;
+        }
+
+        .copyright {
+            color: #050404;
+        }
+
+        @-webkit-keyframes scroll {
+            0% {
+                transform: translateX(0);
             }
 
-            .navbar li {
-                float: left;
-                list-style: none;
-                margin: 13px 20px;
+            100% {
+                transform: translateX(calc(-250px * 7));
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
             }
 
-            .navbar ul {
-                overflow: auto;
+            100% {
+                transform: translateX(calc(-250px * 7));
             }
+        }
 
-            .navbar li a {
-                padding: 3px 3px;
-                text-decoration: none;
-                color: rgb(0, 0, 0);
-                font-size: 20px;
-                /* Increase the font size */
-            }
+        .slider {
+            background: white;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+            height: 100px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 960px;
+        }
 
-            .navbar input {
-                border: 2px solid rgb(0, 0, 0);
-                border-radius: 14px;
-                padding: 3px 17px;
-                width: 129px;
-            }
+        .slider::before,
+        .slider::after {
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 100px;
+            position: absolute;
+            width: 200px;
+            z-index: 2;
+        }
 
-            .nv {
-                float: right;
-                margin-left: 5px;
-            }
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
 
-            .footer-16371 {
-                background-color: #b5d2df;
-                padding: 1rem 0;
-                font-family: "Poppins", sans-serif;
-            }
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
 
-            .footer-16371 .footer-site-logo {
-                text-align: center;
-                font-size: 2rem;
-                font-weight: 900;
-            }
+        .slider .slide-track {
+            -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
 
-            .footer-16371 .footer-site-logo a {
-                color: #cbc5dd;
-            }
+        .slider .slide {
+            height: 100px;
+            width: 250px;
+        }
+        #partners{
+            margin: 100px;
+        }
+    </style>
 
-            .footer-16371 .nav-links {
-                padding: 0;
-                margin: 0;
-            }
-
-            .footer-16371 .nav-links li {
-                display: inline-block;
-            }
-
-            .footer-16371 .nav-links li a {
-                padding: 10px;
-                color: #000;
-            }
-
-            .footer-16371 .nav-links li a:hover {
-                color: #4200ff;
-            }
-
-            .copyright {
-                color: #050404;
-            }
-            @-webkit-keyframes scroll {
-                0% {
-                  transform: translateX(0);
-                }
-                100% {
-                  transform: translateX(calc(-250px * 7));
-                }
-              }
-              
-              @keyframes scroll {
-                0% {
-                  transform: translateX(0);
-                }
-                100% {
-                  transform: translateX(calc(-250px * 7));
-                }
-              }
-              .slider {
-                background: white;
-                box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-                height: 100px;
-                margin: auto;
-                overflow: hidden;
-                position: relative;
-                width: 960px;
-              }
-              .slider::before,
-              .slider::after {
-                background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-                content: "";
-                height: 100px;
-                position: absolute;
-                width: 200px;
-                z-index: 2;
-              }
-              .slider::after {
-                right: 0;
-                top: 0;
-                transform: rotateZ(180deg);
-              }
-              .slider::before {
-                left: 0;
-                top: 0;
-              }
-              .slider .slide-track {
-                -webkit-animation: scroll 40s linear infinite;
-                animation: scroll 40s linear infinite;
-                display: flex;
-                width: calc(250px * 14);
-              }
-              .slider .slide {
-                height: 100px;
-                width: 250px;
-              }
-              .partnerheading{
-                  /* margin: 40px 40px; */
-                  padding-bottom: 40px;
-                  padding-left: 400px ;
-                  align-items: center;
-              }
-              #partners{
-                  margin: 100px;
-              }
-              
-        </style>
-
-        <!-- <meta charset="utf-8">
+    <!-- <meta charset="utf-8">
     <title>ICAICCIT - 2023</title>
     <meta name="description" content="Conference Website - ICAICCIT - 2023">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -158,14 +160,14 @@
     <link rel="preload" href="/_next/static/css/ac901b60827c2a59.css" as="style">
     <link rel="stylesheet" href="css/ac901b60827c2a59.css" data-n-g=""><noscript data-n-css=""></noscript>
     <script defer="" nomodule="" src="js/polyfills-c67a75d1b6f99dc8.js"></script>
-    <script src="js/webpack-b8f8d6679aaa5f42.js" defer=""></script>
-    <script src="js/framework-2c79e2a64abdb08b.js" defer=""></script>
-    <script src="js/main-0c597b21730512df.js" defer=""></script>
+    <script src="js/webpack-b8f8d6679aaa5f42.js" defer=""></script>-->
+    <!-- <script src="js/framework-2c79e2a64abdb08b.js" defer=""></script> -->
+    <!--<script src="js/main-0c597b21730512df.js" defer=""></script>
     <script src="js/_app-981897abb835b3ff.js" defer=""></script>
     <script src="js/registration-b923d0ca6bbbe0a2.js" defer=""></script>
     <script src="js/_buildManifest.js" defer=""></script>
     <script src="js/_ssgManifest.js" defer=""></script> -->
-    </head>
+</head>
 
 <body>
     <nav class="navbar">
@@ -180,192 +182,196 @@
 
         </ul>
     </nav>
-    <div id="__next">
-        
-        <div class="sticky -top-0 w-full h-20 shadow-xl z-[100] bg-[hsl(162,60%,79%)]">
-            <main class="flex-grow">
-                <section class="py-10 text-gray-600" data-aos="fade-right">
-                    <div class="text-center flex flex-col items-center w-full">
-                        <h3 class="text-gray-600 md:text-5xl text-4xl md:mt-20 mt-28 font-bold font-playFair">
-                            Registration <span>Details</span></h3>
-                        <div class="flex items-center justify-center mt-10"><a
-                                href="https://forms.gle/PEtEsycnMg2HABf58" target="_blank">
-                                <h3
-                                    class="text-[#de0650] text-2xl flex items-center gap-3 border-2 rounded-xl p-4 m-5 font-poppins text-center">
-                                    Click Here to Register Yourself<!-- --> <svg stroke="currentColor"
-                                        fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
-                                        class="hidden md:flex" height="25" width="25"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z">
-                                        </path>
-                                    </svg></h3>
-                            </a></div>
-                        <div class="flex items-center justify-center mt-5"><a
-                                href="https://www.eptc-ieee.net/uploads/exhibitors-pdf/59c22cf8b853e_Copyright%20form.pdf"
-                                target="_blank">
-                                <h3
-                                    class="text-[#de0650] text-2xl flex items-center gap-3 border-2 rounded-xl p-4 m-5 font-poppins text-center">
-                                    IEEE Copyright Link</h3>
-                            </a></div>
-                        <p class="text-[#de0650] my-3 text-3xl mt-10 font-bold font-playFair">Conference Registration
-                            Fee and Policy</p>
-                        <p class="my-3 text-lg  mt-4 font-bold max-w-[700px] text-gray-600">At least one of the author
-                            of the paper has to register for the conference. It is mandatory to present the paper in the
-                            conference for the inclusion of the paper in the conference proceedings. (ISBN NO-
-                            979-8-3503-4438-7)</p>
-                        <div class="mt-14 justify-center flex text-gray-600 ">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th colspan="2" class="text-lg">For Indian Authors and Deligates (in INR)</th>
-                                        <th colspan="2" class="text-lg">For Foreign Authors and Deligates (in USD)</th>
-                                    </tr>
-                                    <tr class="text-lg">
-                                        <th></th>
-                                        <th>IEEE Member</th>
-                                        <th>General</th>
-                                        <th>IEEE Member</th>
-                                        <th>General</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-lg font-bold">UG/PG Students</td>
-                                        <td>4,000</td>
-                                        <td>5,000</td>
-                                        <td>160</td>
-                                        <td>230</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-lg font-bold">Faculty and Research Scholar</td>
-                                        <td>6,000</td>
-                                        <td>8,000</td>
-                                        <td>130</td>
-                                        <td>170</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-lg font-bold">Industry</td>
-                                        <td>8,000</td>
-                                        <td>10,000</td>
-                                        <td>200</td>
-                                        <td>250</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-lg font-bold">Attendee only</td>
-                                        <td>3,000</td>
-                                        <td>5,000</td>
-                                        <td>50</td>
-                                        <td>90</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="flex justify-center items-center mt-4 text-gray-600 font-playFair">
-                            <p><b>*Author should pay registration amount as mentioned above + 18% GST</b></p>
-                        </div>
-                        <div class="flex flex-col items-center justify-center">
-                            <h3 class="text-[#de0650] my-3 text-4xl mt-10 font-bold font-playFair">Payment Details</h3>
-                            <p class="font-bold mt-2">Note: Payment to be made through NEFT / RTGS in favour of “Manav
-                                Rachna International Institute of Research &amp; Studies” payable at Faridabad</p>
-                            <p class="font-bold">Please keep the printed details of the fee receipt which will be
-                                submitted at the time of physical registration at the conference venue.</p>
-                            <div class="border-2 rounded-xl p-3 flex flex-col mt-5 text-lg font-bold">
-                                <p class="flex">Payment Details - </p>
-                                <p>RTGS/NEFT Transfer</p>
-                                <p></p>
-                                <p class="flex">Account No - </p>
-                                <p>201004119068</p>
-                                <p></p>
-                                <p class="flex">Account Name -<!-- --> </p>
-                                <p> <!-- -->MANAV RACHNA INTERNATIONAL INSTITUTE OF RESEARCH AND STUDIES GST</p>
-                                <p></p>
-                                <p class="flex">IFSC Code - </p>
-                                <p> INDB0000702</p>
-                                <p></p>
-                                <p class="flex">Bank Name - </p>
-                                <p> INDUSIND BANK</p>
-                                <p></p>
-                                <p class="flex">Address - </p>
-                                <p> NIT NEELAM BATA ROAD, FARIDABAD</p>
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col items-center justify-center">
-                            <h3 class="text-[#de0650] my-3 text-4xl mt-10 font-bold font-playFair">For International
-                                Payment</h3>
-                            <p class="text-2xl font-bold">SWIFT CODE - INDBINBBNDH</p>
-                            <p class="text-2xl font-bold">MICR CODE - 110234066</p>
-                        </div>
+    <!-- <div class="main_content">
+        <h3 class="text-gray-600 md:text-5xl text-4xl md:mt-20 mt-28 font-bold font-playFair">
+            Registration <span>Details</span></h3>
+
+    </div> -->
+
+    <main class="flex-grow">
+        <section class="py-10 text-gray-600" data-aos="fade-right">
+            <div class="text-center flex flex-col items-center w-full">
+                <h3 class="text-gray-600 md:text-5xl text-4xl md:mt-20 mt-35 font-bold font-playFair ">
+                    Registration <span>Details</span></h3>
+                <div class="flex items-center justify-center mt-10"><a href="https://forms.gle/PEtEsycnMg2HABf58"
+                        target="_blank">
+                        <h3
+                            class="text-[#de0650] text-2xl flex items-center gap-3 border-2 rounded-xl p-4 m-5 font-poppins text-center">
+                            Click Here to Register Yourself<!-- --> <svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 1024 1024" class="hidden md:flex" height="25" width="25"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z">
+                                </path>
+                            </svg></h3>
+                    </a></div>
+                <div class="flex items-center justify-center mt-5"><a
+                        href="https://www.eptc-ieee.net/uploads/exhibitors-pdf/59c22cf8b853e_Copyright%20form.pdf"
+                        target="_blank">
+                        <h3
+                            class="text-[#de0650] text-2xl flex items-center gap-3 border-2 rounded-xl p-4 m-5 font-poppins text-center">
+                            IEEE Copyright Link</h3>
+                    </a></div>
+                <p class="text-[#de0650] my-3 text-3xl mt-10 font-bold font-playFair">Conference Registration
+                    Fee and Policy</p>
+                <p class="my-3 text-lg  mt-4 font-bold max-w-[700px] text-gray-600">At least one of the author
+                    of the paper has to register for the conference. It is mandatory to present the paper in the
+                    conference for the inclusion of the paper in the conference proceedings. (ISBN NO-
+                    979-8-3503-4438-7)</p>
+                <div class="mt-14 justify-center flex text-gray-600 ">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="2" class="text-lg">For Indian Authors and Deligates (in INR)</th>
+                                <th colspan="2" class="text-lg">For Foreign Authors and Deligates (in USD)</th>
+                            </tr>
+                            <tr class="text-lg">
+                                <th></th>
+                                <th>IEEE Member</th>
+                                <th>General</th>
+                                <th>IEEE Member</th>
+                                <th>General</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-lg font-bold">UG/PG Students</td>
+                                <td>4,000</td>
+                                <td>5,000</td>
+                                <td>160</td>
+                                <td>230</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg font-bold">Faculty and Research Scholar</td>
+                                <td>6,000</td>
+                                <td>8,000</td>
+                                <td>130</td>
+                                <td>170</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg font-bold">Industry</td>
+                                <td>8,000</td>
+                                <td>10,000</td>
+                                <td>200</td>
+                                <td>250</td>
+                            </tr>
+                            <tr>
+                                <td class="text-lg font-bold">Attendee only</td>
+                                <td>3,000</td>
+                                <td>5,000</td>
+                                <td>50</td>
+                                <td>90</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex justify-center items-center mt-4 text-gray-600 font-playFair">
+                    <p><b>*Author should pay registration amount as mentioned above + 18% GST</b></p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <h3 class="text-[#de0650] my-3 text-4xl mt-10 font-bold font-playFair">Payment Details</h3>
+                    <p class="font-bold mt-2">Note: Payment to be made through NEFT / RTGS in favour of “Manav
+                        Rachna International Institute of Research &amp; Studies” payable at Faridabad</p>
+                    <p class="font-bold">Please keep the printed details of the fee receipt which will be
+                        submitted at the time of physical registration at the conference venue.</p>
+                    <div class="border-2 rounded-xl p-3 flex flex-col mt-5 text-lg font-bold">
+                        <p class="flex">Payment Details - </p>
+                        <p>.........</p>
+                        <p></p>
+                        <p class="flex">Account No - </p>
+                        <p>...........</p>
+                        <p></p>
+                        <p class="flex">Account Name -<!-- --> </p>
+                        <p> <!-- -->......</p>
+                        <p></p>
+                        <p class="flex">IFSC Code - </p>
+                        <p> .............</p>
+                        <p></p>
+                        <p class="flex">Bank Name - </p>
+                        <p> ............</p>
+                        <p></p>
+                        <p class="flex">Address - </p>
+                        <p> ..........</p>
+                        <p></p>
                     </div>
-                </section>
-                <section class="w-full mt-14" data-aos="fade-right">
-                    <div class="text-center mt-14">
-                        <h3 class="text-gray-600 font-bold text-5xl font-playFair">Academic <span>Partners</span></h3>
-                        <div class="flex items-center justify-center mt-12 gap-2 flex-wrap">
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/aws.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/oracle.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/ibm.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/microsoft.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/infosis1.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/purdue.png"></div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <h3 class="text-[#de0650] my-3 text-4xl mt-10 font-bold font-playFair">For International
+                        Payment</h3>
+                    <p class="text-2xl font-bold">SWIFT CODE - INDBINBBNDH</p>
+                    <p class="text-2xl font-bold">MICR CODE - 110234066</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <section id="partners">
-        <h2 class="partnerheading">Academic Partners</h2>
-        <div class="slider">
-    
-          <div class="slide-track">
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
-          </div>
+        <div class="flex flex-col items-center justify-center">
+        <h3 class="text-[#de0650] my-3 text-4xl mt-10 font-bold font-playFair ">Academic Partners</h3>
         </div>
-      </section>
+        <div class="slider">
+
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                        alt="" />
+                </div>
+                <div class="slide">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer-16371">
         <div class="container">
             <div class="row justify-content-center">
@@ -397,8 +403,8 @@
             </div>
         </div>
     </footer>
-    <script id="__NEXT_DATA__"
-        type="application/json">{"props":{"pageProps":{}},"page":"/registration","query":{},"buildId":"11_pTcomAhGd3Ztu0e3YA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </body>
 
 </html>
