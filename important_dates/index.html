@@ -2,153 +2,210 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CONFERENCE</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONFERENCE</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        .navbar {
-            background-color: white;
-            height: 65px;
-        }
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    .navbar {
+      background-color: white;
+      height: 65px;
+    }
 
-        .navbar li {
-            float: left;
-            list-style: none;
-            margin: 13px 20px;
-        }
+    .navbar li {
+      float: left;
+      list-style: none;
+      margin: 13px 20px;
+    }
 
-        .navbar ul {
-            overflow: auto;
-        }
+    .navbar ul {
+      overflow: auto;
+    }
 
-        .navbar li a {
-            padding: 3px 3px;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-size: 20px;
-            /* Increase the font size */
-        }
+    .navbar li a {
+      padding: 3px 3px;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      /* Increase the font size */
+    }
 
-        .navbar input {
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 14px;
-            padding: 3px 17px;
-            width: 129px;
-        }
+    .navbar input {
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 14px;
+      padding: 3px 17px;
+      width: 129px;
+    }
 
-        .nv {
-            float: right;
-            margin-left: 5px;
-        }
+    .nv {
+      float: right;
+      margin-left: 5px;
+    }
 
-        .footer-16371 {
-            background-color: #b5d2df;
-            padding: 1rem 0;
-            font-family: "Poppins", sans-serif;
-        }
+    .footer-16371 {
+      background-color: #b5d2df;
+      padding: 1rem 0;
+      font-family: "Poppins", sans-serif;
+    }
 
-        .footer-16371 .footer-site-logo {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 900;
-        }
+    .footer-16371 .footer-site-logo {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+    }
 
-        .footer-16371 .footer-site-logo a {
-            color: #cbc5dd;
-        }
+    .footer-16371 .footer-site-logo a {
+      color: #cbc5dd;
+    }
 
-        .footer-16371 .nav-links {
-            padding: 0;
-            margin: 0;
-        }
+    .footer-16371 .nav-links {
+      padding: 0;
+      margin: 0;
+    }
 
-        .footer-16371 .nav-links li {
-            display: inline-block;
-        }
+    .footer-16371 .nav-links li {
+      display: inline-block;
+    }
 
-        .footer-16371 .nav-links li a {
-            padding: 10px;
-            color: #000;
-        }
+    .footer-16371 .nav-links li a {
+      padding: 10px;
+      color: #000;
+    }
 
-        .footer-16371 .nav-links li a:hover {
-            color: #4200ff;
-        }
+    .footer-16371 .nav-links li a:hover {
+      color: #4200ff;
+    }
 
-        .copyright {
-            color: #050404;
-        }
-        @-webkit-keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(calc(-250px * 7));
-            }
-          }
-          
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(calc(-250px * 7));
-            }
-          }
-          .slider {
-            background: white;
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-            height: 100px;
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            width: 960px;
-          }
-          .slider::before,
-          .slider::after {
-            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-            content: "";
-            height: 100px;
-            position: absolute;
-            width: 200px;
-            z-index: 2;
-          }
-          .slider::after {
-            right: 0;
-            top: 0;
-            transform: rotateZ(180deg);
-          }
-          .slider::before {
-            left: 0;
-            top: 0;
-          }
-          .slider .slide-track {
-            -webkit-animation: scroll 40s linear infinite;
-            animation: scroll 40s linear infinite;
+    .copyright {
+      color: #050404;
+    }
+
+    @-webkit-keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-250px * 7));
+      }
+    }
+
+    .slider {
+      background: white;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+      height: 100px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 960px;
+    }
+
+    .slider::before,
+    .slider::after {
+      background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+      content: "";
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+    }
+
+    .slider::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    .slider::before {
+      left: 0;
+      top: 0;
+    }
+
+    .slider .slide-track {
+      -webkit-animation: scroll 40s linear infinite;
+      animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+    }
+
+    .slider .slide {
+      height: 100px;
+      width: 250px;
+    }
+
+    .partnerheading {
+      /* margin: 40px 40px; */
+      padding-bottom: 40px;
+      padding-left: 400px;
+      align-items: center;
+    }
+
+    #partners {
+      margin: 100px;
+    }
+
+
+    table,
+    tr,
+    td {
+      border: 1px solid black;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 55px 0px 0px 0px;
+      padding: 0px 0px 20px 0px;
+      --tw-text-opacity: 1;
+      color: blue;
+      font-size: xx-large;
+
+    }
+
+    span {
+      --tw-text-opacity: 1;
+      color: orangered;
+    }
+
+    #t-head1 {
+      color: orangered;
+      font-size: larger;
+    }
+
+    .t-head,
+    .list {
+      color: blue;
+    }
+
+    .row {
             display: flex;
-            width: calc(250px * 14);
-          }
-          .slider .slide {
-            height: 100px;
-            width: 250px;
-          }
-          .partnerheading{
-              /* margin: 40px 40px; */
-              padding-bottom: 40px;
-              padding-left: 400px ;
-              align-items: center;
-          }
-          #partners{
-              margin: 100px;
-          }
-          
-    </style>
-   
-   
-    <!-- <meta name="next-head-count" content="5">
+            padding: 25px 55px 5px 180px;
+            margin: -20px 0px -20px 200px;
+
+        }
+
+        td{
+          color: blue;
+        }
+        .td-2{
+          color: orangered;
+        }
+
+  </style>
+
+
+  <!-- <meta name="next-head-count" content="5">
     <link rel="preload" href="/_next/static/css/ac901b60827c2a59.css" as="style">
     <link rel="stylesheet" href="css/ac901b60827c2a59.css" data-n-g=""><noscript data-n-css=""></noscript>
     <script defer="" nomodule="" src="js/polyfills-c67a75d1b6f99dc8.js"></script>
@@ -162,138 +219,138 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="/about/index.html">About</a></li>
-          <li><a href="conference_track/index.html">Conference Track</a></li>
-          <li><a href="ortho.html">Conference Committee</a></li>
-          <li><a href="/important_dates/index.html">Important Dates</a></li>
-          <li><a href="/registration/index.html">Registration</a></li>
-          <li><a href="/submission/index.html">Submission</a></li>
-    
-        </ul>
-      </nav>
-            <main class="flex-grow">
-                <section class="py-24 text-gray" data-aos="fade-right">
-                    <div class="text-center mt-14">
-                        <h3 class="text-gray-600 text-5xl font-bold font-playFair ">Important <span>Dates</span></h3>
-                    </div>
-                    <div class="mt-10 justify-center  flex text-gray-600">
-                        <table class="text-gray-600">
-                            <tbody>
-                                <tr class="text-2xl">
-                                    <td>Paper Submission Deadline:</td>
-                                    <td>6<sup>th</sup> February, 2024</td>
-                                </tr>
-                                <tr class="text-2xl">
-                                    <td>Acceptance Notification:</td>
-                                    <td>15<sup>th</sup> March, 2024</td>
-                                </tr>
-                                <tr class="text-2xl">
-                                    <td>Camera Ready Paper Submission Deadline:</td>
-                                    <td>15<sup>th</sup> May, 2024</td>
-                                </tr>
-                                <tr class="text-2xl">
-                                    <td>Last Date for Registration:</td>
-                                    <td>30<sup>th</sup> May, 2024</td>
-                                </tr>
-                                <tr class="text-2xl">
-                                    <td>Conference Dates:</td>
-                                    <td>23<sup>rd</sup> &amp; 24<sup>th</sup> July, 2024</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </main>
-            
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/about/index.html">About</a></li>
+      <li><a href="conference_track/index.html">Conference Track</a></li>
+      <li><a href="ortho.html">Conference Committee</a></li>
+      <li><a href="/important_dates/index.html">Important Dates</a></li>
+      <li><a href="/registration/index.html">Registration</a></li>
+      <li><a href="/submission/index.html">Submission</a></li>
+
+    </ul>
+  </nav>
+  <main class="flex-grow">
+    <section class="t-container">
+      <div class="t-heading">
+        <h3 class="t-conference ">Important <span>Dates</span></h3>
+      </div>
+      <div class="row">
+        <table class="t-main" width="700px" height="200px">
+          <tbody>
+            <tr class="text-2xl">
+              <td>Paper Submission Deadline:</td>
+              <td class="td-2">6<sup>th</sup> February, 2024</td>
+            </tr>
+            <tr class="text-2xl">
+              <td>Acceptance Notification:</td>
+              <td class="td-2">15<sup>th</sup> March, 2024</td>
+            </tr>
+            <tr class="text-2xl">
+              <td>Camera Ready Paper Submission Deadline:</td>
+              <td class="td-2">15<sup>th</sup> May, 2024</td>
+            </tr>
+            <tr class="text-2xl">
+              <td>Last Date for Registration:</td>
+              <td class="td-2">30<sup>th</sup> May, 2024</td>
+            </tr>
+            <tr class="text-2xl">
+              <td>Conference Dates:</td>
+              <td class="td-2">23<sup>rd</sup> &amp; 24<sup>th</sup> July, 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  </div>
+  </div>
+  <section id="partners">
+    <h2 class="partnerheading">Academic Partners</h2>
+    <div class="slider">
+
+      <div class="slide-track">
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
         </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+        </div>
+      </div>
     </div>
-    <section id="partners">
-        <h2 class="partnerheading">Academic Partners</h2>
-        <div class="slider">
-    
-          <div class="slide-track">
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
+  </section>
+  <footer class="footer-16371">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+          <a class="navbar-brand" href="index.html">
+            <img class="logoimg" src="img/logo.png" alt=""></a>
+          <br>
+          <div class="footer-site-logo mb-4">
+            <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
           </div>
-        </div>
-      </section>
-    <footer class="footer-16371">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-12 text-center">
-              <a class="navbar-brand" href="index.html">
-                <img class="logoimg" src="img/logo.png" alt=""></a>
-              <br>
-              <div class="footer-site-logo mb-4">
-                <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
-              </div>
-              <ul class="list-unstyled nav-links mb-5">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="conference_committe.html">conference Committee</a></li>
-                <li><a href="conference_track.html">Conference Track</a></li>
-                <li><a href="submission.html">Submission</a></li>
-                <li><a href="importantdates.html">Important Dates</a></li>
-                <li><a href="resgistration.html">Resgistration</a></li>
-                <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
-    
-              </ul>
-    
-              <div class="copyright">
-                <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
-              </div>
-    
-    
-            </div>
+          <ul class="list-unstyled nav-links mb-5">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="conference_committe.html">conference Committee</a></li>
+            <li><a href="conference_track.html">Conference Track</a></li>
+            <li><a href="submission.html">Submission</a></li>
+            <li><a href="importantdates.html">Important Dates</a></li>
+            <li><a href="resgistration.html">Resgistration</a></li>
+            <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
+
+          </ul>
+
+          <div class="copyright">
+            <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
           </div>
+
+
         </div>
-      </footer>
-    
-    <script id="__NEXT_DATA__"
-        type="application/json">{"props":{"pageProps":{}},"page":"/important_dates","query":{},"buildId":"11_pTcomAhGd3Ztu0e3YA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+      </div>
+    </div>
+  </footer>
+
+  <script id="__NEXT_DATA__"
+    type="application/json">{"props":{"pageProps":{}},"page":"/important_dates","query":{},"buildId":"11_pTcomAhGd3Ztu0e3YA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
 </body>
 
 </html>
