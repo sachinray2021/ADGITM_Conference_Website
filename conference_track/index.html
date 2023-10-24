@@ -9,6 +9,10 @@
 
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         .navbar {
             background-color: white;
             height: 65px;
@@ -81,24 +85,28 @@
         .copyright {
             color: #050404;
         }
+
         @-webkit-keyframes scroll {
             0% {
-              transform: translateX(0);
+                transform: translateX(0);
             }
+
             100% {
-              transform: translateX(calc(-250px * 7));
+                transform: translateX(calc(-250px * 7));
             }
-          }
-          
-          @keyframes scroll {
+        }
+
+        @keyframes scroll {
             0% {
-              transform: translateX(0);
+                transform: translateX(0);
             }
+
             100% {
-              transform: translateX(calc(-250px * 7));
+                transform: translateX(calc(-250px * 7));
             }
-          }
-          .slider {
+        }
+
+        .slider {
             background: white;
             box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
             height: 100px;
@@ -106,45 +114,136 @@
             overflow: hidden;
             position: relative;
             width: 960px;
-          }
-          .slider::before,
-          .slider::after {
+        }
+
+        .slider::before,
+        .slider::after {
             background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
             content: "";
             height: 100px;
             position: absolute;
             width: 200px;
             z-index: 2;
-          }
-          .slider::after {
+        }
+
+        .slider::after {
             right: 0;
             top: 0;
             transform: rotateZ(180deg);
-          }
-          .slider::before {
+        }
+
+        .slider::before {
             left: 0;
             top: 0;
-          }
-          .slider .slide-track {
+        }
+
+        .slider .slide-track {
             -webkit-animation: scroll 40s linear infinite;
             animation: scroll 40s linear infinite;
             display: flex;
             width: calc(250px * 14);
-          }
-          .slider .slide {
+        }
+
+        .slider .slide {
             height: 100px;
             width: 250px;
-          }
-          .partnerheading{
-              /* margin: 40px 40px; */
-              padding-bottom: 40px;
-              padding-left: 400px ;
-              align-items: center;
-          }
-          #partners{
-              margin: 100px;
-          }
-          
+        }
+
+        .partnerheading {
+            /* margin: 40px 40px; */
+            padding-bottom: 40px;
+            padding-left: 400px;
+            align-items: center;
+        }
+
+        #partners {
+            margin: 100px;
+        }
+
+        /* table,
+        tr,
+        th {
+            border: 1px solid black;
+        } */
+
+        .row {
+            display: flex;
+            padding: 25px 55px 5px 55px;
+            margin: -20px 0px -20px 0px;
+
+        }
+
+        .column {
+            display: flex;
+            float: left;
+            width: 50%;
+            padding: 5px;
+            padding: 15px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            text-align: center;
+            padding: 16px;
+        }
+
+        td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* background-color: orangered; */
+            color: blue;
+        }
+
+        .tb-main {
+            display: flex;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .text-3xl {
+            align-items: center;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 55px 0px 0px 0px;
+            padding: 0px 0px 20px 0px;
+            --tw-text-opacity: 1;
+            color: blue;
+            font-size: xx-large;
+
+        }
+
+        span {
+            --tw-text-opacity: 1;
+            color: orangered;
+        }
+
+        #t-head1{
+            color: orangered;
+            font-size: larger;
+        }
+
+        .t-head, .list{
+            color: blue;
+        }
     </style>
     <!-- <link rel="icon" href="images/aiccit_logo.png">
     <meta name="next-head-count" content="5"> 
@@ -173,29 +272,33 @@
 
         </ul>
     </nav>
-    <!-- <div id="__next">
-            <main class="flex-grow">
-                <section class="py-10 text-gray" data-aos="fade-right">
-                    <div class="text-center mt-14">
-                        <h3 class="text-gray-600 font-bold font-playFair text-4xl">Conference <span>Tracks</span></h3>
-                    </div>
-                    <div class="mt-14 justify-center mx-6 flex text-gray-600" data-aos="fade-right">
-                        <table class="md:mx-6 mx-[-8px]" width="700px">
+    <div id="__next">
+        <main class="flex-grow">
+
+            <section class="t-container">
+                <div class="t-heading">
+                    <h3 class="t-conference">Conference
+                        <span>Tracks</span>
+                    </h3>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <table class="t-main" width="700px">
                             <thead>
                                 <tr>
-                                    <th class="text-3xl text-[#de0650] font-playFair">Track 1</th>
+                                    <th class="t-head" id="t-head1">Track 1</th>
                                 </tr>
                                 <tr>
-                                    <th class="text-2xl text-gray-600 font-playFair">Theme : Robotics </th>
+                                    <th class="t-head">Theme : Robotics </th>
                                 </tr>
-                                <tr class="text-2xl">
-                                    <th class="text-gray-600 font-playFair">Topics</th>
+                                <tr>
+                                    <th class="t-head">Topic</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="justify-start text-lg">
+                                <tr class="t-body">
                                     <td>
-                                        <ul role="list" class="list-disc pl-5 text-gray-600 marker:text-sky-400">
+                                        <ul class="list">
                                             <li>Human-Robot Collaboration</li>
                                             <li>Robotic Perception and Sensing</li>
                                             <li>Autonomous Navigation</li>
@@ -211,22 +314,24 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="md:mx-6 mx-[5px]" width="700px">
+                    </div>
+                    <div class="column">
+                        <table class="t-main" width="700px">
                             <thead>
                                 <tr>
-                                    <th class="text-3xl text-[#de0650] font-playFair">Track 2</th>
+                                    <th class="t-head" id="t-head1">Track 2</th>
                                 </tr>
                                 <tr>
-                                    <th class="text-2xl text-gray-600 font-playFair">Theme : Healthcare</th>
+                                    <th class="t-head">Theme : Healthcare</th>
                                 </tr>
-                                <tr class="text-2xl">
-                                    <th class="text-gray-600 font-playFair">Topics</th>
+                                <tr>
+                                    <th class="t-head">Topic</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="justify-start text-lg">
+                                <tr class="t-body">
                                     <td>
-                                        <ul role="list" class="list-disc marker:text-sky-400 pl-5 text-gray-600">
+                                        <ul class="list">
                                             <li>Healthcare Digital Transformation</li>
                                             <li>Telehealth and Remote Patient Monitoring</li>
                                             <li>Healthcare Data Security and Privacy</li>
@@ -237,30 +342,35 @@
                                             <li>Healthcare Sustainability and Green Practices</li>
                                             <li>Health Equity and Access to Care</li>
                                             <li>Mental Health and Well-being Initiatives</li>
-                                        
+
                                         </ul>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
-                    <div class="mt-14 justify-center mx-6 flex text-gray-600" data-aos="fade-right">
-                        <table class="md:mx-6 mx-10" width="700px">
+                </div>
+
+
+                <div class="row">
+                    <div class="column">
+                        <table class="t-main" width="700px">
                             <thead>
                                 <tr>
-                                    <th class="text-3xl justify-start text-[#de0650] font-playFair">Track 3</th>
+                                    <th class="t-head" id="t-head1">Track 3</th>
                                 </tr>
                                 <tr>
-                                    <th class="text-2xl text-gray-600 font-playFair">Theme : Forensic</th>
+                                    <th class="t-head">Theme : Forensic </th>
                                 </tr>
-                                <tr class="text-2xl">
-                                    <th class="text-gray-600 font-playFair">Topics</th>
+                                <tr>
+                                    <th class="t-head">Topic</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="justify-start text-lg">
+                                <tr class="t-body">
                                     <td>
-                                        <ul role="list" class="list-disc pl-5 text-gray-600 marker:text-sky-400">
+                                        <ul class="list">
                                             <li>Forensic DNA Analysis</li>
                                             <li>Digital Forensics</li>
                                             <li>Crime Scene Investigation</li>
@@ -276,59 +386,62 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="md:mx-6 mx-10" width="700px">
+                    </div>
+                    <div class="column">
+                        <table class="t-main" width="700px">
                             <thead>
                                 <tr>
-                                    <th class="text-3xl text-[#de0650] font-playFair">Track 4 </th>
+                                    <th class="t-head" id="t-head1">Track 4</th>
                                 </tr>
                                 <tr>
-                                    <th class="text-2xl text-gray-600 font-playFair">Theme : Communication</th>
+                                    <th class="t-head">Theme : Communication</th>
                                 </tr>
-                                <tr class="text-2xl">
-                                    <th class="text-gray-600 font-playFair">Topics</th>
+                                <tr>
+                                    <th class="t-head">Topic</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="justify-start text-lg">
+                                <tr class="t-body">
                                     <td>
-                                        <ul role="list" class="list-disc pl-5 text-gray-600 marker:text-sky-400">
+                                        <ul class="list">
                                             <li>AI in Healthcare and Medical Diagnosis</li>
                                             <li>Ethical and Responsible AI</li>
-                                            <li>AI for Environmental Sustainability</li>    
-                                            <li>AI in Financial Services and Fintech</li>    
-                                            <li>AI in Education and EdTech</li>    
-                                            <li>AI and Robotics Integration</li>    
-                                            <li>AI for Social Good and Humanitarian Efforts</li>    
-                                            <li>AI in Agriculture and Food Security</li>    
-                                            <li>AI in Art and Creativity</li>    
-                                            <li>AI and Legal and Regulatory Implications</li>    
+                                            <li>AI for Environmental Sustainability</li>
+                                            <li>AI in Financial Services and Fintech</li>
+                                            <li>AI in Education and EdTech</li>
+                                            <li>AI and Robotics Integration</li>
+                                            <li>AI for Social Good and Humanitarian Efforts</li>
+                                            <li>AI in Agriculture and Food Security</li>
+                                            <li>AI in Art and Creativity</li>
+                                            <li>AI and Legal and Regulatory Implications</li>
+
                                         </ul>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
+                </div>
 
-
-
-
-                    <div class="mt-14 justify-center mx-6 flex text-gray-600" data-aos="fade-right">
-                        <table class="md:mx-6 mx-10" width="700px">
+                <div class="row">
+                    <div class="column">
+                        <table class="t-main" width="700px">
                             <thead>
                                 <tr>
-                                    <th class="text-3xl justify-start text-[#de0650] font-playFair">Track 5</th>
+                                    <th class="t-head" id="t-head1">Track 5</th>
                                 </tr>
                                 <tr>
-                                    <th class="text-2xl text-gray-600 font-playFair">Theme : Cognitive</th>
+                                    <th class="t-head">Theme : Cognitive</th>
                                 </tr>
-                                <tr class="text-2xl">
-                                    <th class="text-gray-600 font-playFair">Topics</th>
+                                <tr>
+                                    <th class="t-head">Topic</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="justify-start text-lg">
+                                <tr class="t-body">
                                     <td>
-                                        <ul role="list" class="list-disc pl-5 text-gray-600 marker:text-sky-400">
+                                        <ul class="list">
                                             <li>Cognitive Computing and Artificial Intelligence</li>
                                             <li>Cognitive Psychology and Human-Computer Interaction</li>
                                             <li>Cognitive Neuroscience and Brain-Computer Interfaces</li>
@@ -344,22 +457,24 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="md:mx-6 mx-10" width="700px">
+                    </div>
+                    <div class="column">
+                        <table class="t-main" width="700px">
                             <thead>
                                 <tr>
-                                    <th class="text-3xl text-[#de0650] font-playFair">Track 6 </th>
+                                    <th class="t-head" id="t-head1">Track 6</th>
                                 </tr>
                                 <tr>
-                                    <th class="text-2xl text-gray-600 font-playFair">Theme : Sustainable Development</th>
+                                    <th class="t-head">Theme : Sustainable Development</th>
                                 </tr>
-                                <tr class="text-2xl">
-                                    <th class="text-gray-600 font-playFair">Topics</th>
+                                <tr>
+                                    <th class="t-head">Topic</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="justify-start text-lg">
+                                <tr class="t-body">
                                     <td>
-                                        <ul role="list" class="list-disc pl-5 text-gray-600 marker:text-sky-400">
+                                        <ul class="list">
                                             <li>Sustainable Energy and Renewable Resources</li>
                                             <li>Sustainable Agriculture and Food Security</li>
                                             <li>Sustainable Urban Planning and Smart Cities</li>
@@ -375,104 +490,110 @@
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
-                </section>
-                <section class="w-full mt-14" data-aos="fade-right">
-                    <div class="text-center mt-14">
-                        <h3 class="text-gray-600 font-bold text-5xl font-playFair">Academic <span>Partners</span></h3>
-                        <div class="flex items-center justify-center mt-12 gap-2 flex-wrap">
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/aws.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/oracle.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/ibm.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/microsoft.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/infosis1.png"></div>
-                            <div class="relative min-w-[5rem] max-w-[15rem] p-10"><img src="images/purdue.png"></div>
-                        </div>
-                    </div>
-                </section>
-            </main> -->
-            <section id="partners">
-                <h2 class="partnerheading">Academic Partners</h2>
-                <div class="slider">
-            
-                  <div class="slide-track">
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-                    </div>
-                  </div>
                 </div>
-              </section>
-    <footer class="footer-16371">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 text-center">
-                    <a class="navbar-brand" href="index.html">
-                        <img class="logoimg" src="img/logo.png" alt=""></a>
-                    <br>
-                    <div class="footer-site-logo mb-4">
-                        <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
+
+            </section>
+
+
+        </main>
+        <section id="partners">
+            <h2 class="partnerheading">Academic Partners</h2>
+            <div class="slider">
+
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                            alt="" />
                     </div>
-                    <ul class="list-unstyled nav-links mb-5">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="conference_committe.html">conference Committee</a></li>
-                        <li><a href="conference_track.html">Conference Track</a></li>
-                        <li><a href="submission.html">Submission</a></li>
-                        <li><a href="importantdates.html">Important Dates</a></li>
-                        <li><a href="resgistration.html">Resgistration</a></li>
-                        <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
-
-                    </ul>
-
-                    <div class="copyright">
-                        <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                            alt="" />
                     </div>
-
-
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250"
+                            alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250"
+                            alt="" />
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- <script id="__NEXT_DATA__"
+        </section>
+        <footer class="footer-16371">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logoimg" src="img/logo.png" alt=""></a>
+                        <br>
+                        <div class="footer-site-logo mb-4">
+                            <a href="#"> <img src="images/home/nav1/logo1.webp" alt="" width="150px"></a>
+                        </div>
+                        <ul class="list-unstyled nav-links mb-5">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="conference_committe.html">conference Committee</a></li>
+                            <li><a href="conference_track.html">Conference Track</a></li>
+                            <li><a href="submission.html">Submission</a></li>
+                            <li><a href="importantdates.html">Important Dates</a></li>
+                            <li><a href="resgistration.html">Resgistration</a></li>
+                            <!-- <li><a href="previous_year.html">Pervious conference</a></li> -->
+
+                        </ul>
+
+                        <div class="copyright">
+                            <p class="mb-0"><small>&copy; All Rights Reserved.</small></p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- <script id="__NEXT_DATA__"
         type="application/json">{"props":{"pageProps":{}},"page":"/conference_track","query":{},"buildId":"11_pTcomAhGd3Ztu0e3YA","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script> -->
 </body>
 
